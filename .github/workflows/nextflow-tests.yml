@@ -59,7 +59,7 @@ jobs:
                context: "Nextflow config tests",
             });
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: ${{ steps.parse-event.outputs.checkout_sha }}
 
@@ -103,7 +103,7 @@ jobs:
         testfile: ${{ fromJSON(needs.discover.outputs.testfiles) }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: ${{ needs.discover.outputs.checkout_sha }}
           submodules: true
@@ -190,7 +190,7 @@ jobs:
             }
 
       - if: steps.status.outputs.tests-failed == 'true'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ needs.discover.outputs.checkout_sha }}
           # By default the depth is 1, which only fetches the current commit
@@ -202,7 +202,7 @@ jobs:
           token: ${{ steps.status.outputs.should-fix == 'true' && secrets.UCLAHS_CDS_REPO_READ_TOKEN || secrets.GITHUB_TOKEN }}
 
       - if: steps.status.outputs.tests-failed == 'true'
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           merge-multiple: true
 
@@ -272,7 +272,7 @@ jobs:
 
       - if: steps.status.outputs.should-fix == 'true'
         id: pushchanges
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: Autofix Nextflow configuration regression tests
           branch: ${{ needs.discover.outputs.branch_ref }}
