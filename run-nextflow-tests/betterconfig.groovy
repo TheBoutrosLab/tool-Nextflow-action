@@ -238,7 +238,7 @@ void print_configuration() {
         // Try Nextflow 24+ (BuildInfo)
         def buildInfoClass = Class.forName('nextflow.BuildInfo')
         nextflowVersion = buildInfoClass.getDeclaredMethod('getVersion').invoke(null)
-    } catch (ClassNotFoundException | NoSuchFieldException e) {
+    } catch (ClassNotFoundException | NoSuchMethodException e) {
         try {
             // Fallback to Nextflow 23 (Const)
             def constClass = Class.forName('nextflow.Const')
