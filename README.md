@@ -1,4 +1,4 @@
-[![GitHub release](https://img.shields.io/github/v/release/uclahs-cds/tool-Nextflow-action)](https://github.com/uclahs-cds/tool-Nextflow-action/actions/workflows/prepare-release.yaml)
+[![GitHub release](https://img.shields.io/github/v/release/theboutroslab/tool-Nextflow-action)](https://github.com/theboutroslab/tool-Nextflow-action/actions/workflows/prepare-release.yaml)
 
 # Project/Repo Title
 
