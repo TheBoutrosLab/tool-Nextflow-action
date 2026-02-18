@@ -127,7 +127,7 @@ def run_tests(path: Path, dev_image: bool) -> int:
             image_name = build_image(nextflow_version)
         else:
             image_name = ":".join([
-                "ghcr.io/uclahs-cds/nextflow-config-tests",
+                "ghcr.io/theboutroslab/nextflow-config-tests",
                 nextflow_version
             ])
             subprocess.run(

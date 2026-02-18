@@ -24,7 +24,7 @@ For each test, this Action parses the configuration and runs a modified version 
 
 The partition type (e.g. `F2`, `F16`, `F72`) can be mocked using the `cpus` and `memory_gb` keys.
 
-Any methods that access files outside of the repository must be listed in `mocks`. For Boutros Lab pipelines a common method is [`schema.check_path`](https://github.com/uclahs-cds/pipeline-Nextflow-config/blob/3ec718630ff1862377815e6c986a8b56cea1115b/config/schema/schema.config#L51-L56), which can be mocked like so:
+Any methods that access files outside of the repository must be listed in `mocks`. For Boutros Lab pipelines a common method is [`schema.check_path`](https://github.com/theboutroslab/pipeline-Nextflow-config/blob/3ec718630ff1862377815e6c986a8b56cea1115b/config/schema/schema.config#L51-L56), which can be mocked like so:
 
 ```json
   "mocks": {
@@ -100,7 +100,7 @@ permissions:
 
 jobs:
   check-user:
-    uses: uclahs-cds/tool-Nextflow-action/.github/workflows/test-setup.yml@main
+    uses: theboutroslab/tool-Nextflow-action/.github/workflows/test-setup.yml@main
 ```
 
 ```yaml
@@ -123,7 +123,7 @@ permissions:
 jobs:
   tests:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    uses: uclahs-cds/tool-Nextflow-action/.github/workflows/nextflow-tests.yml@main
+    uses: theboutroslab/tool-Nextflow-action/.github/workflows/nextflow-tests.yml@main
     secrets: inherit
 ```
 
