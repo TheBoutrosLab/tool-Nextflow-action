@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy docs
-        uses: uclahs-cds/tool-Nextflow-action/build-and-deploy-docs@main
+        uses: theboutroslab/tool-Nextflow-action/build-and-deploy-docs@main
 ```
 
 ## Parameters
