@@ -47,6 +47,7 @@ jobs:
           metadata-file: run-nextflow-tests/docker-metadata.yaml
           file: run-nextflow-tests/Dockerfile-${{ matrix.nextflow_version }}
           context: run-nextflow-tests
+          platforms: linux/amd64
           custom-tags: |
             type=raw,enable=${{github.event_name == 'push' && github.ref == 'refs/heads/main'}},value=${{ matrix.nextflow_version }}
             type=raw,enable=${{github.event_name == 'push' && github.ref == 'refs/heads/main'}},value=${{ matrix.nextflow_version }}-${{steps.date.outputs.date}}
