@@ -8,6 +8,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-10-27
+
 ### Added
 
 - Add support for testing configuration in Nextflow 25.10.5
@@ -64,3 +66,5 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 [1.0.0-rc.1]: https://github.com/TheBoutrosLab/tool-Nextflow-action/releases/tag/v1.0.0-rc.1
 [1.1.0]: https://github.com/TheBoutrosLab/tool-Nextflow-action/compare/v1.0.0...v1.1.0
 [1.2.0]: https://github.com/TheBoutrosLab/tool-Nextflow-action/compare/v1.1.0...v1.2.0
+[1.3.0]: https://github.com/TheBoutrosLab/tool-Nextflow-action/compare/v1.2.0...v1.3.0
+[unreleased]: https://github.com/TheBoutrosLab/tool-Nextflow-action/compare/v1.3.0...HEAD
