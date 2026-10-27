@@ -8,6 +8,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+## [1.3.1] - 2026-10-27
+
 ### Fixed
 
 - Pass the params file and CLI params to the config builder in Nextflow 25.10.5
@@ -71,4 +73,5 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 [1.1.0]: https://github.com/TheBoutrosLab/tool-Nextflow-action/compare/v1.0.0...v1.1.0
 [1.2.0]: https://github.com/TheBoutrosLab/tool-Nextflow-action/compare/v1.1.0...v1.2.0
 [1.3.0]: https://github.com/TheBoutrosLab/tool-Nextflow-action/compare/v1.2.0...v1.3.0
-[unreleased]: https://github.com/TheBoutrosLab/tool-Nextflow-action/compare/v1.3.0...HEAD
+[1.3.1]: https://github.com/TheBoutrosLab/tool-Nextflow-action/compare/v1.3.0...v1.3.1
+[unreleased]: https://github.com/TheBoutrosLab/tool-Nextflow-action/compare/v1.3.1...HEAD
