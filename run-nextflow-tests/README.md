@@ -8,7 +8,7 @@ Configuration tests are self-contained JSON files named `configtest*.json` with 
 
 | Key | Description |
 | --- | --- |
-| nextflow_version | The version of Nextflow to be used for the tests (e.g. `23.10.0`) |
+| nextflow_version | The version of Nextflow to be used for the tests: `23.10.0`, `24.10.4` or `25.10.5` (one `Dockerfile-<version>` image each) |
 | config | A list of configuration files to be included (`nextflow -c <file1> -c <file2>`) |
 | params_file | A single parameter file or an empty string (`nextflow -params-file <file>`) |
 | cpus | The integer CPU count to be returned by `SysHelper::getAvailCpus()` |
