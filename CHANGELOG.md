@@ -8,6 +8,10 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+### Fixed
+
+- Pass the params file and CLI params to the config builder in Nextflow 25.10.5
+
 ## [1.3.0] - 2026-10-27
 
 ### Added
