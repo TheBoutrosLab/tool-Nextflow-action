@@ -204,13 +204,21 @@ void print_configuration() {
         cmdRun.params."${key}" = value
     }
 
+    def baseDir = Paths.get(System.getenv("BL_PIPELINE_DIR"))
+
     def builder = new ConfigBuilder()
             .setShowClosures(false)
             .showMissingVariables(true)
             .setOptions(launcher_options)
             .setCmdRun(cmdRun)
             // Without this, both baseDir and projectDir would be incorrect
-            .setBaseDir(Paths.get(System.getenv("BL_PIPELINE_DIR")))
+            .setBaseDir(baseDir)
+
+    // Nextflow 25+ no longer reads params from CmdRun inside ConfigBuilder;
+    // they must be parsed up front and passed in, as `nextflow run` does
+    if (builder.respondsTo('setCliParams')) {
+        builder.setCliParams(cmdRun.parsedParams(ConfigBuilder.getConfigVars(baseDir, null)))
+    }
 
     // Build the configuration with an interceptor to mock out user-defined
     // functions
